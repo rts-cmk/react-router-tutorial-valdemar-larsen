@@ -1,9 +1,11 @@
 # Opgave: Lav en tutorial om React Router
 
 ## Formål
+
 Du skal lave en pædagogisk og teknisk korrekt tutorial, der viser hvordan man bruger [React Router](https://reactrouter.com/) til at navigere mellem sider i en React-applikation. Målet er at formidle din viden, så andre elever eller udviklere kan lære af din vejledning.
 
 ## Læringsmål
+
 - Forstå og anvende React Router til routing i en [SPA (Single Page Application)](https://reactrouter.com/en/main/start/tutorial)
 - Forklare centrale begreber som [`<BrowserRouter>`](https://reactrouter.com/en/main/router-components/browser-router), [`<Routes>`](https://reactrouter.com/en/main/router-components/routes), [`<Route>`](https://reactrouter.com/en/main/router-components/route), og [`useNavigate`](https://reactrouter.com/en/main/hooks/use-navigate)
 - Demonstrere hvordan man opretter og strukturerer flere sider i en React-app
@@ -11,6 +13,7 @@ Du skal lave en pædagogisk og teknisk korrekt tutorial, der viser hvordan man b
 - Publicere en fungerende tutorial online
 
 ## Opgavekrav
+
 Du skal:
 
 1. **Introducere React Router**  
@@ -37,6 +40,7 @@ Du skal:
    - Skriftlig guide med kodeeksempler og screenshots
 
 ## Evalueringskriterier
+
 - Klar og korrekt teknisk forklaring
 - Brug af relevante React Router-komponenter
 - Struktur og layout af tutorial
