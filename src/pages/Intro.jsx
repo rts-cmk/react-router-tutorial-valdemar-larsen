@@ -1,4 +1,4 @@
-import PageNavigation from "../components/nav/nav.jsx";
+import PageNavigation from "../components/Nav/Nav.jsx";
 
 function Intro() {
   return (

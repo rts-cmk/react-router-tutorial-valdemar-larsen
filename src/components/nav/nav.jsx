@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router";
-import "./nav.css";
+import "./Nav.css";
 
 // Define the page sequence for navigation
 const pageSequence = [

@@ -1,9 +1,12 @@
-import PageNavigation from "../components/nav/nav.jsx";
+import PageNavigation from "../components/Nav/Nav.jsx";
+import CopyCode from "../components/CopyCode/CopyCode.jsx";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 function Setup() {
   return (
     <main>
-      <section id="howToUse" className="howToUse">
+      <section id="Setup" className="Setup">
         <h1>How to Use React Router</h1>
         <h2>Getting Started</h2>
         <p>
@@ -12,18 +15,22 @@ function Setup() {
           In This demonstration, I'll be using vite to create a react project.
           To start we need to run the following command in the terminal:
         </p>
-        <pre>
-          <code>npm create vite@latest .</code>
-        </pre>
+        <CopyCode>
+          <SyntaxHighlighter language="bash" style={vscDarkPlus}>
+            {`npm create vite@latest .`}
+          </SyntaxHighlighter>
+        </CopyCode>
         <p>
           This command creates a new vite+react project in our current folder.
           After running the command and finishing the setup, we can now proceed
           to installing react router!. To install react router, run the
           following command in the terminal:
         </p>
-        <pre>
-          <code>npm install react-router</code>
-        </pre>
+        <CopyCode>
+          <SyntaxHighlighter language="bash" style={vscDarkPlus}>
+            {`npm install react-router`}
+          </SyntaxHighlighter>
+        </CopyCode>
         <p>
           Great! Now that we have our react project up and running and react
           router installed, we can get started with implementing it in our
@@ -43,48 +50,50 @@ function Setup() {
           Next we will add some basic content to each of these files so we can
           easily identify them later. In Home.jsx, add the following code:
         </p>
-        <pre>
-          <code>
+        <CopyCode>
+          <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
             {`function Home() {
-              return (
-                <main>
-                  <h1>Home</h1>
-                  <p>This is the home page.</p>
-                </main>
-              );
-            }
+  return (
+    <main>
+      <h1>Home</h1>
+      <p>This is the home page.</p>
+    </main>
+  );
+}
 
-            export default Home;`}
-          </code>
-        </pre>
+export default Home;`}
+          </SyntaxHighlighter>
+        </CopyCode>
         <p>In About.jsx, add the following code:</p>
-        <pre>
-          <code>
+        <CopyCode>
+          <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
             {`function About() {
-              return (
-                <main>
-                  <h1>About</h1>
-                  <p>This is the about page.</p>
-                </main>
-              );
-            }
+  return (
+    <main>
+      <h1>About</h1>
+      <p>This is the about page.</p>
+    </main>
+  );
+}
 
-            export default About;`}
-          </code>
-        </pre>
+export default About;`}
+          </SyntaxHighlighter>
+        </CopyCode>
         <p>In Contact.jsx, add the following code:</p>
-        <pre>
-          <code>{`function Contact() {
-              return (
-                <main>
-                  <h1>Contact</h1>
-                  <p>This is the contact page.</p>
-                </main>
-              );
-            }
+        <CopyCode>
+          <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
+            {`function Contact() {
+  return (
+    <main>
+      <h1>Contact</h1>
+      <p>This is the contact page.</p>
+    </main>
+  );
+}
 
-            export default Contact;`}</code>
-        </pre>
+export default Contact;`}
+          </SyntaxHighlighter>
+        </CopyCode>
         <h2>Basic Implementation of react router</h2>
         <p>
           Now, its important to clarify that there are many ways to implement
@@ -96,15 +105,17 @@ function Setup() {
           file. We will start by importing the neccesary components from
           react-router. We can do that as follows:
         </p>
-        <pre>
-          <code>
+        <CopyCode>
+          <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
             {`import { createBrowserRouter, RouterProvider } from "react-router";`}
-          </code>
-        </pre>
+          </SyntaxHighlighter>
+        </CopyCode>
         <p>We will also need to import react, so lets do that too:</p>
-        <pre>
-          <code>import React from "react";</code>
-        </pre>
+        <CopyCode>
+          <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
+            {`import React from "react";`}
+          </SyntaxHighlighter>
+        </CopyCode>
         <p>
           Great! Thats really all we need for a simple implementation of react
           router! Now lets set up our routes in app.jsx.
@@ -119,13 +130,13 @@ function Setup() {
           Lastly, we need to import our page components so we can use them in
           our router. We can do that like this:
         </p>
-        <pre>
-          <code>
+        <CopyCode>
+          <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
             {`import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";`}
-          </code>
-        </pre>
+          </SyntaxHighlighter>
+        </CopyCode>
         <p>
           Alright great! Now that we have all our imports set up, we can proceed
           to setting up our routes!
@@ -138,8 +149,8 @@ import Contact from "./pages/Contact.jsx";`}
           its actually quite simple to setup. Lets look at an example of how to
           set up our routes using createBrowserRouter:
         </p>
-        <pre>
-          <code>
+        <CopyCode>
+          <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
             {`const router = createBrowserRouter([
   {
     path: "/",
@@ -159,8 +170,8 @@ import Contact from "./pages/Contact.jsx";`}
     ],
   },
 ]);`}
-          </code>
-        </pre>
+          </SyntaxHighlighter>
+        </CopyCode>
         <p>
           As you can see, its quite easy to read, the only thing you really need
           to know is that index means the page that will be shown as the front
@@ -176,35 +187,36 @@ import Contact from "./pages/Contact.jsx";`}
           with its own properties. Lets look at the first route object in the
           children array:
         </p>
-        <pre>
-          <code>
+        <CopyCode>
+          <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
             {`children: [
-      {
-        index: true,
-        element: <Home />,
-      },`}
-          </code>
-        </pre>
+  {
+    index: true,
+    element: <Home />,
+  },`}
+          </SyntaxHighlighter>
+        </CopyCode>
         <p>
           So here we have 2 properties. index and element. The index property we
           use here to say, "Hey, we want this to be the route that is shown as
           the front page of the website". Next we have the element property,
           this is where the imports we made earlier come into play. Earlier, we
-          imported all our page components, Home, Intro, HowToUse, Examples and
-          Conclusion. Here in the element property, we specify which component
-          should be rendered when this route is active. In this case, we want
-          the Home component to be rendered when the user visits the root path
-          of the website.
+          imported all our page components, Home, About and Contact. Here in the
+          element property, we specify which component should be rendered when
+          this route is active. In this case, we want the Home component to be
+          rendered when the user visits the root path of the website.
         </p>
         <p>
           Lastly, to get everything working, we need to use our new router in
           the app function. We can do that like this:
         </p>
-        <pre>
-          <code>{`function App() {
+        <CopyCode>
+          <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
+            {`function App() {
   return <RouterProvider router={router} />;
-}`}</code>
-        </pre>
+}`}
+          </SyntaxHighlighter>
+        </CopyCode>
         <p>
           Now that we've gone over the basic setup, creating our pages,
           importing them into app.jsx and setting up our routes, we can proceed

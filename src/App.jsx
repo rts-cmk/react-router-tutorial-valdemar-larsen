@@ -1,6 +1,5 @@
 ﻿import { createBrowserRouter, RouterProvider } from "react-router";
 
-// Import your page components
 import Home from "./pages/Home.jsx";
 import Intro from "./pages/Intro.jsx";
 import Setup from "./pages/Setup.jsx";
@@ -9,7 +8,6 @@ import Conclusion from "./pages/Conclusion.jsx";
 import ErrorPage from "./pages/error.jsx";
 import "./style/main.css";
 
-// Create the router configuration
 const router = createBrowserRouter([
   {
     path: "/",
